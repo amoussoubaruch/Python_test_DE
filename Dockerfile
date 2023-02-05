@@ -1,0 +1,1 @@
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6LABEL author="Baruch AMOUSSOU DJANGBAN"COPY requirements.txt /app/requirements.txtRUN pip install --no-cache-dir -r /app/requirements.txtENV LISTEN_PORT 80EXPOSE 80COPY ./api/main_api.py /app/main.pyCOPY . /app
